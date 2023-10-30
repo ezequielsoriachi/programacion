@@ -1,4 +1,4 @@
- manipular las carpetas y rutas de la maquina previamente scaneada. Crear, eliminar, editar, mover y copiar carpetas. (Apuntando siempre a la maquina deseada dentro de nuestra red)
+
  @echo off
 set "ruta_red=\\nombre_de_la_maquina\compartido"
 
