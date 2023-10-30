@@ -1,4 +1,4 @@
- 
+
  @echo off
 set "ruta_red=\\nombre_de_la_maquina\compartido"
 
