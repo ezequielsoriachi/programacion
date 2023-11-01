@@ -30,6 +30,7 @@ if %opcion% == 5 goto salir
 
 
 :manipulacion_de_directorios_agus
+
 @echo off
 echo.
 color a0
