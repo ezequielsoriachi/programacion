@@ -1,6 +1,7 @@
 @echo off
 echo.
-color 0B
+color a0
+REM prueba maxi
 
 :crear
 if exist pruebas (goto inicio) else (MD "C:\pruebas" & goto inicio) 
@@ -11,15 +12,15 @@ echo.
 echo ---------------------------------------------
 echo               Selecciona una opcion
 echo                1. Scannear red
-echo                2. Manipulación de directorios
-echo                3. Manipulación de archivos
+echo                2. ManipulaciÃ³n de directorios
+echo                3. ManipulaciÃ³n de archivos
 echo                4. Ejecutar mysql, apache y el servicio de github
 echo                5. Salir
 echo ---------------------------------------------
 set /p opcion= Ingresa tu opcion: 
 if %opcion% == 1 goto scannear_red_seba
 if %opcion% == 2 goto manipulacion_de_directorios_agus
-if %opcion% == 3 goto manufiles
+if %opcion% == 3 goto manipulacion_de_archivo_manu
 if %opcion% == 4 goto ejecutar_servicios_maxi
 if %opcion% == 5 goto salir
 
@@ -30,9 +31,7 @@ if %opcion% == 5 goto salir
 
 :manipulacion_de_directorios_agus
 
-
-
-:manufiles
+:manipulacion_de_archivo_manu
 color 0B
 title MANIPULACION DE ARCHIVOS
 cls
