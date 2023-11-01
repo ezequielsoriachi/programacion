@@ -1,6 +1,7 @@
 @echo off
 echo.
 color a0
+REM prueba maxi
 
 :crear
 if exist pruebas (goto inicio) else (MD "C:\pruebas" & goto inicio) 
@@ -11,8 +12,8 @@ echo.
 echo ---------------------------------------------
 echo               Selecciona una opcion
 echo                1. Scannear red
-echo                2. Manipulaci�n de directorios
-echo                3. Manipulaci�n de archivos
+echo                2. Manipulación de directorios
+echo                3. Manipulación de archivos
 echo                4. Ejecutar mysql, apache y el servicio de github
 echo                5. Salir
 echo ---------------------------------------------
@@ -25,6 +26,7 @@ if %opcion% == 5 goto salir
 
 
 :scannear_red_seba
+
 :menu1
 del fichero*.tmp
 cls
