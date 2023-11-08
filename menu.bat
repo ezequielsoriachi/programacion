@@ -30,8 +30,7 @@ if %opcion% == 5 goto salir
 
 
 :manufiles
-set ruta=C:\m
-set ipe=192.168.100.3
+set ruta=C:\W
 color 02
 title MANIPULACION DE ARCHIVOS
 cls
@@ -54,7 +53,7 @@ set /p omf=
 	if %omf% == 3 (goto modificar)
 	if %omf% == 4 (goto mover)
 	if %omf% == 5 (goto eliminar)
-	if %omf% == 6 (goto bu)
+	if %omf% == 6 (goto bu1)
 	if %omf% == 7 (goto inicio)
 	if %omf% == 77 (goto m)
 	if %omf% neq 77 (goto ono)
@@ -165,14 +164,24 @@ echo.
 echo INGRESE EL NOMBRE DEL ARCHIVO A MOVER:
 echo.
 set /p dt44= 
+cls 
+echo.
+echo LOS DIRECTORIOS Y ARCHIVOS SON:
+echo.
+cd %ruta%
+dir /b
 echo.
 echo INGRESE EL DIRECTORIO DONDE SE GUARDARA EL ARCHIVO A MOVER:
 echo.
 set /p dt444= 
-move "%ruta%\%dt44%" "%ipe%\%dt444%"
+move "%ruta%\%dt44%" "%ruta%\%dt444%"
 cls
 echo.
 echo OPERACION COMPLETA, PRESIONE CUALQUIER TECLA PARA VOLVER AL MENU PRINCIPAL...
+echo.
+cls
+echo.
+for /r "%ruta%" %%I in (*.*) do (echo %%I)
 echo.
 pause>nul
 goto :manufiles
@@ -197,7 +206,7 @@ echo.
 pause>nul
 goto :manufiles
 
-:bu
+:bu1
 title RESPALDAR ARCHIVO
 cls
 echo.
@@ -210,7 +219,10 @@ echo.
 set /p dt77= 
 cls
 echo.
+	if exist "Backup" (goto bu2)
+	if exist "backup" (goto bu2)
 mkdir %ruta%\Backup
+:bu2
 copy "%ruta%\%dt77%" "%ruta%\Backup"
 echo.
 echo OPERACION COMPLETA, PRESIONE CUALQUIER TECLA PARA VOLVER AL MENU PRINCIPAL...
@@ -234,7 +246,6 @@ echo COMANDO NO VALIDO.
 echo.
 pause>nul
 goto :manufiles
-
 
 :ejecutar_servicios_maxi
 
