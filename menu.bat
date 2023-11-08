@@ -30,6 +30,8 @@ if %opcion% == 5 goto salir
 
 
 :manufiles
+set ruta=C:\m
+set ipe=192.168.100.3
 color 02
 title MANIPULACION DE ARCHIVOS
 cls
@@ -167,7 +169,7 @@ echo.
 echo INGRESE EL DIRECTORIO DONDE SE GUARDARA EL ARCHIVO A MOVER:
 echo.
 set /p dt444= 
-move "%ruta%\%dt44%" "%dt444%"
+move "%ruta%\%dt44%" "%ipe%\%dt444%"
 cls
 echo.
 echo OPERACION COMPLETA, PRESIONE CUALQUIER TECLA PARA VOLVER AL MENU PRINCIPAL...
@@ -208,10 +210,10 @@ echo.
 set /p dt77= 
 cls
 echo.
-echo INGRESE EL DIRECTORIO DONDE SE GUARDARA EL ARCHIVO A RESPALDAR:
+mkdir %ruta%\Backup
+copy "%ruta%\%dt77%" "%ruta%\Backup"
 echo.
-set /p dt777= 
-copy "%ruta%/%dt77%" "%dt777%"
+echo OPERACION COMPLETA, PRESIONE CUALQUIER TECLA PARA VOLVER AL MENU PRINCIPAL...
 echo.
 pause>nul
 goto :manufiles
